@@ -2,6 +2,9 @@
 import { MdDeveloperMode } from "react-icons/md";
 import { PiBankFill } from "react-icons/pi";
 import { MdCorporateFare } from "react-icons/md";
+import developer from '../assets/developers.png'
+import corporate from '../assets/corporate.png'
+import bank from '../assets/bank.jpg'
 const People = () => {
  
     return (
@@ -16,8 +19,8 @@ const People = () => {
        <p className="text-3xl uppercase ml-10 flex mb-5"><MdDeveloperMode className="text-blue-600"></MdDeveloperMode> Developers</p>
        <div className="avatar ml-10 p-5">
         
-  <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+  <div className="w-24 ml-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+    <img src={developer} />
   </div>
 </div>
 <div className="card w-96 mr-10 mt-5 bg-gradient-to-b from-blue-700 to-black-400 text-black">
@@ -32,8 +35,8 @@ const People = () => {
        <p className="text-3xl uppercase ml-10 flex mb-5"><MdCorporateFare className="text-blue-700"></MdCorporateFare> corporates</p>
        <div className="avatar ml-10 p-5">
         
-  <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+  <div className="w-24 rounded-full ml-10 ring ring-primary ring-offset-base-100 ring-offset-2">
+    <img src={corporate}/>
   </div>
 </div>
 <div className="card w-96 mr-10 mt-5 bg-gradient-to-b from-blue-700 to-black-400 text-black">
@@ -63,8 +66,8 @@ In summary,We can say corporate professionals use task management tools to enhan
        <p className="text-3xl uppercase flex mb-5 ml-10"><PiBankFill className="text-blue-700"></PiBankFill> Bankers</p>
        <div className="avatar ml-10 p-5">
         
-  <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-    <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+  <div className="w-24 ml-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+    <img src={bank} />
   </div>
 </div>
 <div className="card w-96 mr-10 mt-5 bg-gradient-to-b from-blue-700 to-black-400 text-black">

@@ -1,10 +1,11 @@
 
 import { FcGoogle } from "react-icons/fc";
 import UseAuth from "../hooks/UseAuth";
+import { useNavigate } from "react-router-dom";
 const SocialLogin = () => {
     const { googleSignIn } = UseAuth();
     // const axiosPublic = UseAxiosPublic();
-    // const navigate = useNavigate();
+     const navigate = useNavigate();
 
     const handleGoogleSignIn = () =>{
         googleSignIn()
@@ -16,10 +17,10 @@ const SocialLogin = () => {
             }
             console.log(userInfo)
             // axiosPublic.post('/users', userInfo)
-            // .then(res =>{
-            //     console.log(res.data);
-            //     navigate('/');
-            // })
+            .then(res =>{
+                console.log(res.data);
+                navigate('/');
+            })
         })
     }
     return (
