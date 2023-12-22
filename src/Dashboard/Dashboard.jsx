@@ -1,6 +1,6 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { BsListTask  } from 'react-icons/bs';
-import { MdTaskAlt  } from 'react-icons/md';
+
 import { FiPlusCircle  } from 'react-icons/fi';
 import { FaHome } from "react-icons/fa";
 import { AuthContext } from "../Provider/AuthProvider";
@@ -28,7 +28,7 @@ const Dashboard = () => {
               </div>
             {/* Sidebar content here */}
             <li className="text-base"><Link to="/dashboard/mytask"><BsListTask/>To Do List</Link></li>
-            <li className="text-base"><Link to="/comppletedtask"><MdTaskAlt/>Completed Task</Link></li>
+            
             <li className="text-base"><Link to="/"><FaHome/>Home</Link></li>
 
           </ul>

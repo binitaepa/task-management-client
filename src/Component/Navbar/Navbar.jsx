@@ -12,9 +12,9 @@ const Navbar = () => {
     }
     const navOptions = <>
     <li><Link to="/">Home</Link></li>
-    <li><Link to="/plans">Plans</Link></li>
+    <li><Link to="/plan">Plans</Link></li>
     <li><Link to="/price">Pricing</Link></li>
-    <li><Link to="/about">About Us</Link></li>
+    <li><Link to="/aboutus">About Us</Link></li>
     <li><Link to="/contact">Contact Us</Link></li>
     {
             user ? <>

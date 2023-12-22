@@ -4,12 +4,15 @@ import UseAxiosSecure from "../hooks/UseAxiosSecure";
 import Swal from "sweetalert2";
 import { AiFillEdit } from 'react-icons/ai';
 import { MdDelete } from 'react-icons/md';
-
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import { useState } from "react";
 const MyTask = () => {
     const [tasks, refetch] = useTasks();
+    
     const axiosSecure = UseAxiosSecure();
     // const pendingTask = tasks.filter(task => task.status === "Pending");
     const navigate = useNavigate();
+   
     const handleUpdate = (task) => {
         // const taskdata = { status: "Completed" }
         axiosSecure.put(`/updatetask/${task._id}`)
@@ -68,7 +71,9 @@ const MyTask = () => {
                                         <th className="text-center">Action</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                              
+                              <tbody>
+                              
                                     {
                                         tasks.map((task, index) =>
                                             <tr key={task._id}>
@@ -92,13 +97,14 @@ const MyTask = () => {
                                                     <button onClick={() => { handleDelete(task) }} className="btn btn-ghost btn-xs text-2xl" title="Delete"><MdDelete /></button>
                                                 </div>
                                                 </td>
-                                           
+                                            
 
-                                            </tr>)
+                                            </tr>
+                                            )
                                     }
-
+                                         
                                 </tbody>
-
+                            
 
                             </table>
                         </div>

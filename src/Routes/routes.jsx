@@ -10,6 +10,10 @@ import Dashboard from "../Dashboard/Dashboard";
 import NawTask from "../Dashboard/NawTask";
 import MyTask from "../Dashboard/MyTask";
 import UpdateTask from "../Dashboard/UpdateTask";
+import COntactUs from "../Component/ContactUs/COntactUs";
+import Plans from "../Component/Plans/Plans";
+import Pricing from "../Component/Pricing/Pricing";
+import AboutUs from "../Component/AboutUs/AboutUs";
   
 
 const router = createBrowserRouter([
@@ -28,6 +32,22 @@ const router = createBrowserRouter([
         {
             path:'/signup',
             element:<SignUp></SignUp>
+        },
+        {
+            path:'/plan',
+            element:<Plans></Plans>
+        },
+        {
+            path:'/price',
+            element:<Pricing></Pricing>
+        },
+        {
+            path:'/aboutus',
+            element:<AboutUs></AboutUs>
+        },
+        {
+            path:'/contact',
+            element:<COntactUs></COntactUs>
         }
     ]
     },
@@ -46,7 +66,7 @@ element:<MyTask></MyTask>
        {
         path: "updatetask/:id",
         element: <UpdateTask></UpdateTask>,
-        loader: ({ params }) => fetch(`http://localhost:5000/findmyonetask/${params.id}`)
+        loader: ({ params }) => fetch(`https://task-management-server-pink.vercel.app/findmyonetask/${params.id}`)
     },
     ]
     },
